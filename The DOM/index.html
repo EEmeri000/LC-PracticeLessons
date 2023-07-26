@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Add content using DOM</title>
+</head>
+<body>
+      <p id="main-text">Words about things...</p>
+      <script>
+        window.addEventListener("load", function(){
+        
+            let confirm = window.confirm("Do you want more words?");
+        if (confirm) {
+            let p = document.getElementById("main-text");
+        p.append("More words about things");
+        console.log(p.innerHTML);
+        } else { window.alert("Why not?!")
+        let p = document.getElementById("main-text");
+        p.append("Spoil Sport!");
+        console.log(p.innerHTML);
+    }
+
+    })
+      </script>
+</body>
+</html>
